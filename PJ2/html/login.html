@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script type="text/javascript">
+
+        function locator(str, n) {
+            var temp=0;
+            for(var i=0;i<str.length;i++){
+                if(str.charAt(i)==n){
+                    temp++;
+                }
+            }
+            return temp;
+        }
+        function jud(str) {
+            return str.length;
+        }
+        window.onload=function () {
+            var inp = document.getElementsByTagName('input');
+            var inp1 = inp[0];
+            var inp2 = inp[1];
+            var inp3 = inp[2];
+            var input = document.getElementById('form').getElementsByClassName('alarm');
+            var user = input[0];
+            var password = input[1];
+            var num = input[2];
+            var users=0;
+
+            inp1.onfocus=function () {
+                user.style.display="block";
+                user.innerHTML='<i class="begin"></i>Username can not be less than 6 characters'
+            };
+            inp1.onblur=function () {
+                users = jud(this.value);
+                var re = /[^\w\u4e00-\u9fa5]/g;
+                if(re.test(this.value)){
+                    user.innerHTML='<i class="error"></i>Illegal Username！'
+                }
+                else if(this.value==""){
+                    user.innerHTML='<i class="error"></i>Invalid Username！'
+                }
+                else if(users<6){
+                    user.innerHTML='<i class="error"></i>Username less than 6 character！'
+                }else if(this.value=="000000"){
+                    user.innerHTML='<i class="error"></i>Username is not existed！'
+                }
+                else {
+                    user.innerHTML='<i class="right"></i>Correct Username'
+                }
+            };
+            inp2.onfocus=function () {
+                password.style.display="block";
+                password.innerHTML='<i class="error"></i>Password can not be less than 6 characters,recommend mixed passwords'
+            };
+            inp2.onblur=function () {
+                var m=locator(inp2.value, inp2.value[0]);
+                var re_1 = /[^\d]/g;
+                var re_2 = /[^a-zA-Z]/g;
+                if(this.value==""){
+                    password.innerHTML='<i class="error"></i>Password can not be empty!'
+                }else if(m==this.value.length){
+                    password.innerHTML='<i class="error"></i>Password can not be the same character! '
+                }else if(this.value.length<6){
+                    password.innerHTML='<i class="error"></i>Password less than 6 characters！';
+                }else if(!re_1.test(this.value)){
+                    password.innerHTML='<i class="error"></i>Password is all numbers!';
+                }else if(!re_2.test(this.value)){
+                    password.innerHTML='<i class="error"></i>Password is all letters!';
+                }else if(this.type== null){
+                    password.innerHTML='<i class="error"></i>Wrong password';
+                }
+                else {
+                    password.innerHTML='<i class="right"></i>Correct password';
+                }
+            };
+            inp3.onfocus=function () {
+                num.style.display="block";
+                num.innerHTML='<i class="begin"></i>Please enter numbers shown below'
+            };
+            inp3.onblur=function () {
+                users = jud(this.value);
+                // var re = /[^\w\u4e00-\u9fa5]/g;
+                if (this.value != 7364) {
+                    num.innerHTML = '<i class="error"></i>Please check again'}
+                else
+                    {
+                        num.innerHTML = '<i class="right"></i>Correct'
+                    }
+                }
+                ;
+                var signin = document.getElementById('signIn');
+                var isRight = document.getElementsByTagName('i');
+                signin.onclick = function () {
+                    if (isRight.length != 3) {
+                        alert("Log failed,Please finish the table!")
+                    } else if (isRight[0].className == "right" && isRight[1].className == "right") {
+                        alert("Log in successfully");
+                        signin.href = "home2.html";
+                    } else if (isRight[0].className == "error" || isRight[1].className == "error") {
+                        alert("Log in failed");
+                    } else {
+                        alert("Server error")
+                    }
+                }
+            };
+    </script>
+</head>
+<body>
+<header>
+    <p><a href="home.html"> Back to Art Store</a> </p>
+</header>
+<form id="form">
+    <div>
+        <p name="p">Log in  <span>(Please register first）</span></p>
+        <label for="name">Username:<input id="name" class="text"></label><p class="alarm"></p>
+        <label for="password">Password:<input id="password" type="password" class="text"></label><p class="alarm"></p>
+        <a href="" id="forget">Forget password？</a><br>
+        <img id="che" src="../material/images/check.jpg"><br>
+        <label for="password">Check number<input id="checkp" type="password" class="text"></label><div class="alarm"></div><br>
+        <a class="button" id="signIn" ><input type="button" value=" Log in " ></a>
+        <a href="Signup.html" class="button" id="reg"><input type="button" value=" Sign up " ></a>
+    </div>
+</form>
+<footer id="footer">
+    <nav>
+        <a>Home page</a>
+        <a>Contact us</a>
+        <a>Find paintings</a>
+    </nav>
+    <p >Copyright©Lwy2017-2018</p>
+</footer>
+</body>
+</html>

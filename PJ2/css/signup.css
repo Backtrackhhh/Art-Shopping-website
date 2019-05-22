@@ -1,0 +1,116 @@
+form{
+    width: auto;
+    position: relative;
+    height: 600px;
+}
+[name=p]{
+    font-weight: bold;
+    font-size: 2.5em;
+}
+[name=p] span{
+    font-family: "Adobe Hebrew";
+    font-size: 0.6em;
+    color: white;
+}
+.text{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+/*#password{*/
+    /*margin-left: 0;*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*#check{*/
+    /*margin-left: 1px;*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*#mail{*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*#address{*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*#tel{*/
+    /*margin-bottom: 0.5em;*/
+/*}*/
+/*#signIn{*/
+    /*margin-left: 7em;*/
+/*}*/
+#trouble{
+   font-family: "Adobe Caslon Pro";
+    font-weight: bold;
+    left: 50%;
+    font-size: 1.2em;
+    color:greenyellow;
+}
+
+.handin{
+    border: none;
+    background: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.handin:hover{
+    border: none;
+    cursor: pointer;
+}
+/*.mess{*/
+    /*font-size: 12px;*/
+    /*color: palevioletred;*/
+/*}*/
+/*.begin{*/
+    /*background-image: url("../images/works/small/inf.PNG");*/
+    /*height: 18px;*/
+    /*width: 18px;*/
+/*}*/
+/*.error{*/
+    /*background-image: url("../images/works/small/error.PNG");*/
+    /*height: 18px;*/
+    /*width: 18px;*/
+/*}*/
+/*.right{*/
+    /*background-image: url("../images/works/small/ok.PNG");*/
+    /*height: 18px;*/
+    /*width: 18px;*/
+/*}*/
+/*form i{*/
+    /*width: 18px;*/
+    /*height: 18px;*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*border-radius: 9px;*/
+
+select {
+    width: 75%;
+    height: 2em;
+}
+footer{
+    /*margin-top: 0.5em;*/
+    position: absolute;
+    top:1000px;
+    background-color: darkolivegreen;
+    padding: 2em;
+    width: 100%;
+}
+footer p{
+    font-style: italic;
+    font-family: "Times New Roman";
+    margin-left: 42%;
+}
+footer a{
+    margin: 3.5em;
+    padding: 0.5em;
+}
+footer a:hover{
+    background-color: lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+nav{
+    margin-left: 25%;
+}

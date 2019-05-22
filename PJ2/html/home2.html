@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Art home</title>
+    <link rel="stylesheet" href="../css/csshome.css" type="text/css">
+</head>
+<body>
+<div id="top">
+    <div id="nav">
+        <a href=""> Home</a>
+        <a href="">Search</a>
+        <a href="">Detail</a>
+        <a href="./login.html" id="log">lwy</a>
+        <a href="./Signup.html">Sign up</a>
+    </div><h1>Art Store</h1>
+    <p class="em">Where you find <span> genius </span>and <span> Extraordinary</span></p>
+</div>
+
+<div id="cont">
+    <div id="box">
+        <ul class="list">
+            <li class="current" style="opacity: 1;"><img src="../material/images/u=3796486764,1421405627&fm=27&gp=0.jpg" width="100%" height="600"></li>
+            <li style="opacity: 0;"><img src="../material/images/001140.jpg" width="100%" height="600"></li>
+            <li style="opacity: 0;"><img src="../material/images/008010.jpg" width="100%" height="600"></li>
+            <li style="opacity: 0;"><img src="../material/images/u=622308327,1515153228&fm=27&gp=0.jpg" width="100%" height="600"></li>
+            <li style="opacity: 0;"><img src="../material/images/u=1944736820,1880300519&fm=27&gp=0.jpg" width="100%" height="600"></li>
+            <li style="opacity: 0;"><img src="../material/images/u=3475151849,572236059&fm=27&gp=0.jpg" width="100%" height="600"></li>
+        </ul>
+    </div>
+    <a name="btn"id="b1" href="javascript:;">></a>
+    <a name="btn"id="b2" href="javascript:;"><</a>
+    <div id="box1">
+        <ul class="count">
+            <li class="current"><img src="../material/images/u=3796486764,1421405627&fm=27&gp=0.jpg" width="150" height="150"></li>
+            <li class=""><img src="../material/images/001140.jpg" width="150" height="150"></li>
+            <li class=""><img src="../material/images/008010.jpg"  width="150" height="150"></li>
+            <li class=""><img src="../material/images/u=622308327,1515153228&fm=27&gp=0.jpg" width="150" height="150"></li>
+            <li class=""><img src="../material/images/u=1944736820,1880300519&fm=27&gp=0.jpg" width="150" height="150"></li>
+            <li class=""><img src="../material/images/u=3475151849,572236059&fm=27&gp=0.jpg" width="150" height="150"></li>
+        </ul>
+    </div>
+</div>
+<section id="popular">
+    <p id="subtitle"><span>HOT</span>&nbsp;&nbsp;pieces</p>
+    <div id="popularPhoto1">
+        <a href="details.html"> <img class="photo" src="../material/images/a1.jpg" height="100" width="100"></a>
+        <p id="explain1" class="explain">This is the most popular work last week, and even more than thirty million people browse it. </p>
+    </div>
+    <div id="popularPhoto2">
+        <a href="details.html"> <img src="../material/images/a2.jpg" class="photo" width="100" height="100"></a>
+        <p id="explain2" class="explain">This is the second popular work last week, and more than ten million people have seen it.</p>
+    </div>
+    <div id="popularPhoto3">
+        <a href="details.html"><img src="../material/images/a3.jpg" class="photo" width="100" height="100"></a>
+        <p id="explain3" class="explain">This is the third popular work last week, and more than five million have seen it.</p>
+    </div>
+</section>
+<script>
+    var box=document.getElementById('box');
+    var uls=document.getElementsByTagName('ul');
+    var imgs=uls[0].getElementsByTagName('li');
+    var btn=uls[1].getElementsByTagName('li');
+    var i=index=0;
+    var play=null;
+    console.log(box,uls,imgs,btn);
+
+
+    function show(a){
+        for(i=0;i<btn.length;i++ ){
+            btn[i].className='';
+            btn[a].className='current';
+        }
+        for(i=0;i<imgs.length;i++){
+            imgs[i].style.opacity=0;
+            imgs[a].style.opacity=1;
+        }
+    }
+
+    for(i=0;i<btn.length;i++){
+        btn[i].index=i;
+        btn[i].onmouseover=function(){
+            show(this.index);
+            clearInterval(play);
+        }
+    }
+    var next=document.getElementById('b1');
+    var pre=document.getElementById('b2');
+    b1.onclick = function () {
+        index++;
+        index>=imgs.length&&(index=0);
+        show(index);
+    };
+    b2.onclick = function () {
+        index--;
+        index>=imgs.length&&(index=0);
+        show(index);
+    };
+
+
+
+
+    function autoPlay(){
+        play=setInterval(function(){
+            index++;
+            index>=imgs.length&&(index=0);
+            show(index);
+        },3000)
+    }
+    autoPlay();
+
+
+    box.onmouseover=function(){
+        clearInterval(play);
+    };
+    box.onmouseout=function(){
+        autoPlay();
+    };
+    // log.onclick = function () {
+    //      log.innerHTML='lwy';
+    //  };
+</script>
+</body>
+</html>

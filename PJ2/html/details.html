@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="../css/details.css" type="text/css">
+    <script>
+        window.onload=function () {
+            var addbtn = document.getElementById('add-cart');
+            var height = document.documentElement.scrollHeight;
+            var width = document.documentElement.scrollWidth;
+            var height2 = document.documentElement.clientHeight;
+            var getbg = document.createElement("div");
+            var getremind = document.createElement("div");
+            addbtn.onclick=function () {
+                getbg.id="bg";
+                getbg.style.height = height + "px";
+                getbg.style.width = width + "px";
+                document.body.appendChild(getbg);
+                getremind.id="remind";
+                getremind.innerHTML='<p>Add successfully</p><br><button id="end">OK</button>';
+                document.body.appendChild(getremind);
+                getremind.style.left = (width-getremind.offsetWidth)/2 + "px";
+                getremind.style.top = (height2-getremind.offsetHeight)/2 + "px";
+                var getend = document.getElementById("end");
+                getend.onclick=function () {
+                    document.body.removeChild(getbg);
+                    document.body.removeChild(getremind);
+                }
+            };
+            var searched = document.getElementById('searchbtn');
+            var unsearched = document.getElementById('content');
+            searched.onclick=function () {
+                if(unsearched.value.length==0){
+                    searched.href="#";
+                }else {
+                    searched.href="nocontent.html";
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to<a href="home.html"><span>Art Store</span></a>
+    <div>
+        <a href="login.html" id="name"><i class="User"></i>Log in</a>
+        <a href="nopieces.html" id="cart"><i class="cart"></i>shopping cart</a>
+        <a href="home.html" id="signOut"><i class="logout"></i>Log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+<p id="ptitle">Vergenia girls</p>
+<p id="author">--By  <a href="search.html">Picasso</a></p>
+<div id="img">
+    <img src="../material/images/001140.jpg" width="450" height="600" alt="Picasso">
+</div>
+<div id="right">
+    <table class="aside">
+        <tr>
+            <th>Popular artists</th>
+        </tr>
+        <tr>
+            <td><a href="search.html">Picasso</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">Mike</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">Kate</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">Michael</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">Jack</a></td>
+        </tr>
+    </table>
+    <table class="aside">
+        <tr>
+            <th>Popular pieces</th>
+        </tr>
+        <tr>
+            <td><a href="search.html">qwe</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">asd</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">zxc</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">bnm</a></td>
+        </tr>
+        <tr>
+            <td><a href="search.html">jkl</a></td>
+        </tr>
+    </table>
+</div>
+<div id="article">
+    <p class="intro">
+        Picasso (1881 ~ 1973) was born in Spain, is the most creative and contemporary western most far-reaching artist, he and his paintings took art history in the world the immortal status. Picasso was a prolific painter, according to statistics, he works a total of nearly 37,000, including: painting 1885, drawing 7089, 20,000 prints, lithographs 6121.  With the impoverished life of Vincent Van Gogh  different matter to brilliant life of Picasso, he saw the first ever live collection of his works into the Louvre was a painter. In December 1999 a French newspaper conducted an opinion survey, 40% of the vote he was elected as the 20th century's greatest painters of the first ten.
+    </p>
+    <p id="">Price:<span id="s">$</span><span id="num">1,200,000</span> </p>
+    <input type="button" value="Add to Wish List">
+    <input type="button" id="add-cart" value="Add to the shopping cart">
+</div>
+<table id="bottom">
+    <tr class="bottomtop">
+        <th colspan="2">Piece Details</th>
+    </tr>
+    <tr>
+        <td class="tbleft">Date:</td><td class="tbright">1948</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Medium:</td><td class="tbright">Vergina girls</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Dimension:</td><td class="tbright">450cm*600cm</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Home:</td><td class="tbright">Baltimore Art Museum</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Genres:</td><td class="tbright">Neoclassical</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Subjects:</td><td class="tbright">Love</td>
+    </tr>
+    <tr>
+        <td class="tbleft">Heat:</td><td class="tbright">13</td>
+    </tr>
+</table>
+
+</body>
+</html>

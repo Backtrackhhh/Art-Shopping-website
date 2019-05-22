@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/cart.css">
+    <script>
+        window.onload=function () {
+            var searched = document.getElementById('searchbtn');
+            var unsearched = document.getElementById('content');
+            searched.onclick=function () {
+                if(unsearched.value.length==0){
+                    searched.href="#";
+                }else {
+                    searched.href="nocontent.html";
+                }
+            };
+            var aA = document.getElementById('checkOut');
+            aA.onclick=function () {
+                alert("Pay successfully!")
+            };
+            var oDelete = document.getElementsByClassName("deletepiece");
+            oDelete[1].onclick=oDelete[0].onclick=function () {
+                alert("Delete successfully!");
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to &nbsp;<span>Art Store</span>
+    <div>
+        <a href="information.html" id="name"><i class="User"></i>lwy</a>
+        <a href="cart.html" id="cart"><i class="cart"></i>shopping cart</a>
+        <a href="home.html" id="signOut"><i class="logout"></i>log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+
+<section>
+    <p id="cart-title">My cart</p>
+    <div id="list">
+        <div class="piece">
+            <a href="details.html"> <img src="../material/images/piece1.jpg" height="75" width="75"></a>
+            <div class="pieces">
+                <p class="piecename">Girls</p>
+                <p class="pieceauthor">By Mike</p>
+                <a class="price" href="">Price:$1,600,000 </a>
+                <a class="deletepiece" href="" id="delete">Delete it </a>
+            </div>
+        </div>
+        <div class="piece">
+            <a href="details.html"> <img src="../material/images/piece2.jpg" height="75" width="75"></a>
+            <div class="pieces">
+                <p class="piecename">Sky</p>
+                <p class="pieceauthor">By Jacken</p>
+                <a class="price" href="">Price:$1,800,000 </a>
+                <a class="deletepiece" href="">Delete it </a>
+            </div>
+        </div><br>
+        <a href="" id="checkOut">Pay:$ 1,900,000</a>
+        <div class="sep">
+            <a href="#">Prev</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">8</a>
+            <a href="#">10</a>
+            <a href="#">11</a>
+            <a href="#">12</a>
+            <span class="ellipsis">...</span>
+            <a href="#">97</a>
+            <a href="#">98</a>
+            <a href="#">99</a>
+            <a href="#">100</a>
+            <a  href="#">Next</a>
+
+    </div>
+</section>
+</body>
+</html>

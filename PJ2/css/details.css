@@ -1,0 +1,240 @@
+html, body, header, footer, hgroup, nav, main, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+body{
+
+    min-width: 600px;
+}
+header{
+    background-color: darkolivegreen;
+    padding-top: 0.5em;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+}
+header a{
+
+    font-size: 1em;
+}
+header div{
+    position: absolute;
+    top: 0.8em;
+    right: 4em;
+}
+header a {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.3em;
+    margin: 0.3em;
+    border-radius: 0.2em;
+}
+header a:hover{
+    color: darkolivegreen;
+    background-color: black;
+}
+header span{
+    font-family: Gabriola;
+    font-size: 2.5em;
+    font-style: italic;
+}
+#searchbox{
+    background-image:url("../material/images/search.png");
+    border: none;
+    width: 40px;
+    height: 37px;
+    float: right;
+    outline: none;
+}
+[name=d]{
+    background-color: darkolivegreen;
+}
+#content{
+    border: 1px solid black;
+    float: right;
+    height: 37px;
+    width: 400px;
+}
+form{
+    float: right;
+    margin-top: 1em;
+    margin-right: 1.5em;
+}
+#title{
+    font-weight: bold;
+    font-size:3em;
+    margin-left: 0.5em;
+}
+nav{
+    background-color: gold;
+    padding: 1em;
+    border: 1px solid grey;
+}
+
+.nav{
+    margin-left: 2em;
+    margin-right: 2em;
+    color: black;
+}
+.nav:hover{
+    color: darkolivegreen;
+}
+header i{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.logout{
+    background-image: url("../material/images/out1.png");
+    height: 30px;
+    width: 30px;
+}
+.cart{
+    background-image: url("../material/images/cart4 .png");
+    height: 30px;
+    width: 30px;
+}
+.User{
+    background-image: url("../material/images/people.png");
+    height: 30px;
+    width: 30px;
+}
+
+#searchbox:hover{
+    cursor: pointer;
+}
+#bottom th{
+    text-align: right;
+    border: 1px solid grey;
+    padding-right: 74px;
+}
+#s{
+    color: red;
+    font-size: 2em;
+    font-style: italic;
+    font-family: "Algerian";
+}
+#num{
+    font-family: "Algerian";
+    font-style: italic;
+    font-size: 1.6em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+table{
+    border-collapse: collapse;
+    width: 350px;
+}
+#author a{
+    font-style: italic;
+}
+#author a:hover{
+    color:darkolivegreen;
+}
+.aside{
+    width: 300px;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+.aside td{
+    border: 1px solid powderblue;
+    padding: 0.3em 3em;
+    font-family: "Vladimir Script";
+    font-size: 1.5em;
+}
+.aside th{
+    border: 1px solid powderblue;
+    padding: 0.3em 3em;
+    background-color: darkolivegreen;
+    font-size: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#right td:hover{
+    background-color: green;
+}
+.tbleft{
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 150px;
+}
+.tbright{
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 200px;
+}
+#ptitle{
+    font-style: italic;
+    font-size: 5em;
+    font-family: "Bradley Hand ITC";
+}#img{
+     float: left;
+     margin-top: 1em;
+     margin-right: 2em;
+ }
+#article{
+    margin-top: 1em;
+    margin-left: 4em;
+}
+#right{
+    float: right;
+}
+#bottom{
+    margin-top: 2em;
+    margin-left: 4em;
+}
+.bottomtop{
+    position: relative;
+    background-color: gainsboro;
+    text-align: center;
+}
+.intro{
+    font-family:"Freestyle Script";
+    font-size: 1.5em;
+}
+#bg{
+    background-color: #333333;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#remind{
+    background-color: darkolivegreen;
+    min-width: 300px;
+    min-height: 100px;
+    z-index: 200;
+    position: absolute;
+    border: 2px solid gainsboro;
+}
+#remind p{
+    font-size: 30px;
+    text-align: center;
+}
+#end{
+    background-color: gainsboro;
+    float: right;
+    margin-right: 2em;
+    border: 1px solid gray;
+    font-size: 1.2em;
+}
+#end:hover{ cursor: pointer;
+    background-color: ghostwhite;
+}

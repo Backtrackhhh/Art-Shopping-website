@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/cart.css">
+    <script>
+        window.onload=function () {
+            var searched = document.getElementById('searchbtn');
+            var unsearched = document.getElementById('content');
+            searched.onclick=function () {
+                if(unsearched.value.length==0){
+                    searched.href="#";
+                }else {
+                    searched.href="nocontent.html";
+                }
+            };
+            var aA = document.getElementById('checkOut');
+            aA.onclick=function () {
+                alert("Pay successfully!")
+            };
+            var oDelete = document.getElementsByClassName("deletepiece");
+            oDelete[1].onclick=oDelete[0].onclick=function () {
+                alert("Delete successfully!");
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to<a href="home.html"> <span>Art Store</span></a>
+    <div>
+        <a href="information.html" id="name"><i class="User"></i>Log in</a>
+        <a href="#" id="cart"><i class="cart"></i>Shopping cart</a>
+        <a href="home.html" id="signOut"><i class="logout"></i>Log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+
+<section>
+    <p id="cart-title">My cart</p><br><br>
+    <p>No pieces</p>
+
+</body>
+</html>

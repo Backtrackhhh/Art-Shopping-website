@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/page.css">
+    <link href="../css/userinfo.css" rel="stylesheet">
+    <script>
+        window.onload=function () {
+            recharge.onclick = function () {
+                    alert("Top up successfully!")
+                }
+
+        var searched = document.getElementById('searchbtn');
+        var unsearched = document.getElementById('content');
+        searched.onclick=function () {
+            if(unsearched.value.length==0){
+                searched.href="#";
+            }else {
+                searched.href="nocontent.html";
+            }
+        }; }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to<a href="home.html"> <span>Art Store</span></a>
+    <div>
+        <a href="userinfo.html" id="name"><i class="User"></i>lwy</a>
+        <a href="cart.html" id="cart"><i class="cart"></i>shopping cart</a>
+        <a href="home.html" id="signOut"><i class="logout"></i>log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+
+<section>
+    <div id="people">
+        <p id="peopleName" class="information">User：lwy</p>
+        <p id="tel" class="information">Tel：888888</p>
+        <p id="mail" class="information">E-mail：1234567@qq.com</p>
+        <p id="add" class="information">Address：China Shanghai</p>
+        <p id="money" class="information">Bank amount：$16,541,651</p>
+        <input id="alter" type="button" value="Withdraw"><input id="recharge" type="button" value="Top up">
+    </div>
+    <div id="record">
+        <div id="upload">
+            <p id="upload-title">The pieces I've upload</p>
+            <div class="list">
+                <div id="upload-photo-1" class="upload-photo">
+                    <a href="details.html"> <img src="../material/images/001140.jpg" class="photo" height="75" width="75" id="upload-photo1"></a>
+                    <span id="upload-photo-explain1">
+                            Name：Lake<br>
+                            Upload date：2000.0201<br>
+                            Introduction：Master pieces
+                        </span>
+                </div>
+                <div id="upload-photo-2" class="upload-photo">
+                    <a href="details.html"> <img src="../material/images/008010.jpg" class="photo" height="75" width="75"></a>
+                    <span id="upload-photo-explain2">
+                            Name：Sky<br>
+                            Upload date：2000.0202<br>
+                            Introduction：My favorite one
+                        </span>
+                </div>
+                <div id="upload-photo-3" class="upload-photo">
+                    <a href="details.html"><img src="../material/images/013010.jpg" class="photo" height="75" width="75"></a>
+                    <span id="upload-photo-explain3">
+                            Name：sunrise<br>
+                            Upload date：2000.0203<br>
+                            Introduction：I love it
+                        </span>
+                </div>
+                <!--<div id="upload-photo-4" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/timg.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="upload-photo-explain4">-->
+                            <!--Name：Castle<br>-->
+                            <!--Upload date：2000.0204<br>-->
+                            <!--Introduction：Nice one-->
+                        <!--</span>-->
+                <!--</div>-->
+                <!--<div id="upload-photo-5" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/u=7883351,808469402&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="upload-photo-explain5">-->
+                            <!--Name：Father<br>-->
+                            <!--Upload date：2000.0205<br>-->
+                            <!--Introduction：Rock N Roll-->
+                        <!--</span>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div id="buy">
+            <p id="buy-title">The pieces I've bought</p>
+            <table id="buy-details">
+                <tr>
+                    <td>Order：123456</td>
+                    <td>Customer：lwy</td>
+                    <td>Time：2001.0201</td>
+                    <td>Price：￥160,000</td>
+                </tr>
+                <tr>
+                    <td>Order：123456</td>
+                    <td>Customer：lwy</td>
+                    <td>Time：2001.0202</td>
+                    <td>Price：￥  162,000</td>
+                </tr>
+                <!--<tr>-->
+                    <!--<td>Order：123456</td>-->
+                    <!--<td>Customer：lwy</td>-->
+                    <!--<td>Time：2001.0203</td>-->
+                    <!--<td>Price：￥163,000</td>-->
+                <!--</tr>-->
+            </table>
+        </div>
+        <div id="sell">
+            <p id="sell-title">The pieces I've sold：</p>
+            <div class="list">
+                <div id="sell-photo-1" class="upload-photo">
+                    <a href="details.html"><img src="../material/images/u=622308327,1515153228&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>
+                    <span id="sell-photo-explain1">
+                            Customer：lwy<br>
+                            Time：2001.0201<br>
+                            Price：￥160,000
+                        </span>
+                </div>
+                <!--<div id="sell-photo-2" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/u=1852856866,1862080488&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="sell-photo-explain2">-->
+                            <!--Customer：lwy<br>-->
+                            <!--Time：2001.0201<br>-->
+                            <!--Price：￥160,000-->
+                        <!--</span>-->
+                <!--</div>-->
+                <!--<div id="sell-photo-3" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/u=1944736820,1880300519&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="sell-photo-explain3">-->
+                            <!--Customer：lwy<br>-->
+                            <!--Time：2001.0202<br>-->
+                            <!--Price：￥170,000-->
+                        <!--</span>-->
+                <!--</div>-->
+                <!--<div id="sell-photo-4" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/u=2493576715,3291685509&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="sell-photo-explain4">-->
+                            <!--Customer：lwy<br>-->
+                            <!--Time：2001.0203<br>-->
+                            <!--Price：￥180,000-->
+                        <!--</span>-->
+                <!--</div>-->
+                <!--<div id="sell-photo-5" class="upload-photo">-->
+                    <!--<a href="details.html"><img src="../material/images/u=2493576715,3291685509&fm=27&gp=0.jpg" class="photo" height="75" width="75"></a>-->
+                    <!--<span id="sell-photo-explain5">-->
+                            <!--Customer：lwy<br>-->
+                            <!--Time：2001.0204<br>-->
+                            <!--Price：￥190,000-->
+                        <!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</section>
+</body>
+</html>

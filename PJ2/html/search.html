@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <script>
+        window.onload=function () {
+            var searched = document.getElementById('searchbtn');
+            var unsearched = document.getElementById('content');
+            searched.onclick=function () {
+                if(unsearched.value.length==0){
+                    searched.href="#";
+                }else {
+                    searched.href="nocontent.html";
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to &nbsp;<a href="home.html"> <span>Art Store</span></a>
+    <div>
+        <a href="Userinfo.html" id="name"><i class="User"></i>lwy</a>
+        <a href="cart.html" id="cart"><i class="cart"></i>shopping cart</a>
+        <a href="home.html" id="signOut"><i class="logout"></i>log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+<p id="search-result">Search results：</p>
+<div id="sort">
+    <label>Sort by &nbsp;&nbsp;&nbsp;</label>
+    <label for="sort-1">Price:<input type="radio" name="sort" id="sort-1"></label>
+    <label for="sort-2">Hot:<input type="radio" name="sort" id="sort-2"></label>
+    <label for="sort-3">Title:<input type="radio" name="sort" id="sort-3" checked></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div id="results">
+    <div class="content">
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/001140.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">God</p>
+                    <p class="exp2">By dddd</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Master pieces</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>0</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/008010.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Sky</p>
+                    <p class="exp2">By aaaa</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Good price</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>1</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/013010.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Lake</p>
+                    <p class="exp2">By wwww</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Demo</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>2</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/timg.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Beats</p>
+                    <p class="exp2">By oooo</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">My favorite one</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>3</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/u=7883351,808469402&fm=27&gp=0.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Bridge</p>
+                    <p class="exp2">By iou</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Nice one</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>4</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/u=622308327,1515153228&fm=27&gp=0.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Tree</p>
+                    <p class="exp2">By kate</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">I like it</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>5</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/u=1852856866,1862080488&fm=27&gp=0.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Fighter</p>
+                    <p class="exp2">By pppp</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Big hand</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>6</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/u=1944736820,1880300519&fm=27&gp=0.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Light</p>
+                    <p class="exp2">By Mike</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">I'm shocked</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>7</span></a>
+            </div>
+        </div>
+        <div class="resultp">
+            <div class="box">
+                <img src="../material/images/u=2493576715,3291685509&fm=27&gp=0.jpg" height="180" width="180">
+                <div class="exp">
+                    <p class="exp1">Flame</p>
+                    <p class="exp2">By York</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="solution">Master pieces</p>
+                <a href="details.html">View</a>
+                <a href="#">Hot<span>8</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sep">
+    <a href="#">Prev</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">8</a>
+    <a href="#">8</a>
+    <a href="#">10</a>
+    <a href="#">11</a>
+    <a href="#">12</a>
+    <span class="ellipsis">...</span>
+    <a href="#">97</a>
+    <a href="#">98</a>
+    <a href="#">99</a>
+    <a href="#">100</a>
+    <a  href="#">Next</a>
+</div>
+</body>
+</html>

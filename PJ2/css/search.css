@@ -1,0 +1,220 @@
+
+html, body, header, footer, hgroup, nav, main, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+body{
+
+    min-width: 600px;
+}
+header{
+    background-color: darkolivegreen;
+    padding-top: 0.5em;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+}
+header a{
+
+    font-size: 1em;
+}
+header div{
+    position: absolute;
+    top: 0.8em;
+    right: 4em;
+}
+header a {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.3em;
+    margin: 0.3em;
+    border-radius: 0.2em;
+}
+header a:hover{
+    color: darkolivegreen;
+    background-color: black;
+}
+header span{
+    font-family: Gabriola;
+    font-size: 2.5em;
+    font-style: italic;
+}
+#searchbox{
+    background-image:url("../material/images/search.png");
+    border: none;
+    width: 40px;
+    height: 37px;
+    float: right;
+    outline: none;
+}
+[name=d]{
+    background-color: darkolivegreen;
+}
+#content{
+    border: 1px solid black;
+    float: right;
+    height: 37px;
+    width: 400px;
+}
+form{
+    float: right;
+    margin-top: 1em;
+    margin-right: 1.5em;
+}
+#title{
+    font-weight: bold;
+    font-size:3em;
+    margin-left: 0.5em;
+}
+nav{
+    background-color: gold;
+    padding: 1em;
+    border: 1px solid grey;
+}
+
+.nav{
+    margin-left: 2em;
+    margin-right: 2em;
+    color: black;
+}
+.nav:hover{
+    color: darkolivegreen;
+}
+header i{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.logout{
+    background-image: url("../material/images/out1.png");
+    height: 30px;
+    width: 30px;
+}
+.cart{
+    background-image: url("../material/images/cart4 .png");
+    height: 30px;
+    width: 30px;
+}
+.User{
+    background-image: url("../material/images/people.png");
+    height: 30px;
+    width: 30px;
+}
+
+#searchbox:hover{
+    cursor: pointer;
+}
+
+.sep{
+    margin:380px 0 0 0;
+    font-size:0;
+    text-align:center;
+    min-width: 600px;
+}
+.sep a {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.sep a{
+    text-decoration:none;
+    color:#005aa0;
+}
+
+.ellipsis{
+    font-size:20px;
+}
+
+.sep a:hover{
+    color: #ff6600;
+}
+#search-result{
+    margin-top: 0.5em;
+    margin-left: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#sort{
+    text-align: right;
+    font-size: 1.5em;
+    font-family: "Adobe Hebrew";
+}
+.resultp{
+    border: 1px solid gold;
+    width: 360px;
+    height: 300px;
+    background-color: darkolivegreen;
+    margin: 1em;
+
+}
+.resultp img{
+    margin: 1em;
+    float: left;
+}
+.resultp .exp{
+    margin-right: 1em;
+    margin-top: 1em;
+    float: right;
+}
+.resultp .box{
+    float: top;
+    display: flow-root;
+}
+.resultp .bottom{
+    float: bottom;
+    padding-left: 1em;
+}
+.bottom a{
+    margin-left: 1.8em;
+    color: white;
+    border: 1px solid gray;
+    background-color: gold;
+    padding: 0.2em;
+    font-size: 1.5em;
+    float: bottom;
+}
+.bottom a:hover{
+    background-color: black;
+}
+.exp1{
+    font-family: "Bradley Hand ITC";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+    width: 120px;
+}
+.exp2{
+    font-family: "Kunstler Script";
+    font-size: 1.2em;
+}
+.solution{
+    height: 50px;
+    font-family: "Algerian";
+}
+.content{
+    float: left;
+    width: 300px;
+}
+#results{
+    margin-left: 6em;
+}
+.sep{
+    position: absolute;
+    top: 880px;
+    left: 300px;
+}
+body{
+    min-width: 1200px;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link href="../css/login.css" rel="stylesheet">
+    <link href="../css/signup.css" rel="stylesheet">
+
+
+<script type="text/javascript">
+
+    function locator(str, n) {
+        var temp=0;
+        for(var i=0;i<str.length;i++){
+            if(str.charAt(i)==n){
+                temp++;
+            }
+        return temp;
+    }}
+     function jud(str) {
+        return str.length;
+    }
+    window.onload=function () {
+        var inp = document.getElementsByTagName('input');
+        var inp1 = inp[0];
+        var pwd1 = inp[1];
+        var pwd2 = inp[2];
+        var mail1  = inp[3];
+        var tel1 = inp[4];
+        var add = inp[5];
+        var input = document.getElementById('form').getElementsByClassName('alarm');
+        var User = input[0];
+        var password1 = input[1];
+        var Password2 = input[2];
+        var mail = input[3];
+        var tel = input[4];
+        var address = input[5];
+        var Users=0;
+        var reg=document.getElementById('reg');
+
+        inp1.onfocus=function () {
+            User.style.display="block";
+            User.innerHTML='<i class="begin"></i>Username can not be less than 6 characters'
+        };
+        inp1.onblur=function () {
+            Users = jud(this.value);
+            var re = /[^\w\u4e00-\u9fa5]/g;
+            if(re.test(this.value)){
+                User.innerHTML='<i class="error"></i>Illegal Username！'
+            }
+            else if(this.value==""){
+                User.innerHTML='<i class="error"></i>Invalid Username！'
+            }
+            else if(Users<6){
+                User.innerHTML='<i class="error"></i>Username less than 6 character！'
+            }else {
+                User.innerHTML='<i class="right"></i>Correct Username'
+            }
+        };
+        pwd1.onfocus=function () {
+            password1.style.display="block";
+            password1.innerHTML='<i class="begin"></i>Password can not be less than 6 characters,recommend mixed passwords'
+        };
+        pwd1.onblur=function () {
+            var m=locator(pwd1.value, pwd1.value[0]);
+            var re_1 = /[^\d]/g;
+            var re_2 = /[^a-zA-Z]/g;
+            if(this.value==""){
+                password1.innerHTML='<i class="error"></i>Password can not be empty!'
+            }else if(m==this.value.length){
+                password1.innerHTML='<i class="error"></i>Password can not be the same character! '
+            }else if(this.value.length<6){
+                password1.innerHTML='<i class="error"></i>Password less than 6 characters！';
+            }else if(!re_1.test(this.value)){
+                password1.innerHTML='<i class="error"></i>Password is all numbers!';
+            }else if(!re_2.test(this.value)){
+                password1.innerHTML='<i class="error"></i>Password is all letters!';
+            }else if(this.value==inp1.value){
+                password1.innerHTML='<i class="error"></i>Password can not be the same as User name'
+            }else if(this.type== null){
+                password1.innerHTML='<i class="error"></i>Wrong password';
+            }
+            else {
+                password1.innerHTML='<i class="right"></i>Correct password';
+            }
+        };
+        pwd2.onfocus=function () {
+            Password2.style.display="block";
+            Password2.innerHTML='<i class="begin"></i>Please make sure the Password';
+        };
+        pwd2.onblur=function () {
+            if(this.value==""){
+                Password2.innerHTML='<i class="error"></i>Invalid Password!';
+            }else if(this.value!=pwd1.value){
+                Password2.innerHTML='<i class="error"></i>Two Passwords are not the same!';
+            }else {
+                Password2.innerHTML='<i class="right"></i>Correct Password!';
+            }
+        };
+        mail1.onfocus=function () {
+            mail.style.display="block";
+            mail.innerHTML='<i class="begin"></i>Please enter your E-mail';
+        };
+        mail1.onblur=function () {
+            var re_2=/@/g;
+            if(this.value==""){
+                mail.innerHTML='<i class="error"></i>Invalid E-mail!';
+            }
+            else if(!re_2.test(this.value)){
+                mail.innerHTML='<i class="error"></i>Wrong E-mail type';
+            }else {
+                mail.innerHTML='<i class="right"></i>Correct E-mail!';
+            }
+        };
+        tel1.onfocus=function () {
+            tel.style.display="block";
+            tel.innerHTML='<i class="begin"></i>Please enter your phone number';
+        };
+        tel1.onblur=function () {
+            if(this.value==""){
+                tel.innerHTML='<i class="error"></i>Invalid Tel!';
+            }
+            else if(this.value.length!=7&&this.value.length!=11){
+                tel.innerHTML='<i class="error"></i>Tel needs to have 11 numbers!';
+            }else {
+                tel.innerHTML='<i class="right"></i>Correct Tel';
+            }
+        };
+        add.onfocus=function () {
+            address.style.display="block";
+            address.innerHTML='<i class="begin"></i>Please enter your detailed address';
+        };
+        add.onblur=function () {
+            if(this.value==""){
+                address.innerHTML='<i class="error"></i>Invalid address!';
+            }
+            else {
+                address.innerHTML = '<i class="right"></i>Correct address!';
+            }
+        };
+        var isOk=document.getElementsByTagName('i');
+        reg.onclick=function () {
+            if(isOk.length!=6){
+                alert("Please finish the table")
+            }
+            else if(isOk[0].className=="right"&&isOk[1].className=="right"&&isOk[2].className=="right"&&isOk[3].className=="right"&&isOk[4].className=="right"&&isOk[5].className=="right"){
+                alert("Register successfully");
+                var aA=document.getElementById('reg');
+                aA.href="PJ-sign.html";
+            }else if(isOk[0].className=="error"||isOk[1].className=="error"||isOk[2].className=="error"||isOk[3].className=="error"||isOk[4].className=="error"||isOk[5].className=="error"){
+                alert("Register failed!Please check the table");
+            }else {
+                alert("Register failed!Server error")
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<header>
+    <p><a href=home..html">Back to Art Store</a> </p>
+</header>
+<form id="form">
+    <div>
+        <p name="p">Register <span>(If you already got a account,please log in ）</span></p>
+        <label for="Username">Username：<input id="Username" class="text"></label><p class="alarm"></p>
+        <label for="password">Password：<input id="password" class="text" type="password"></label><p class="alarm"></p>
+        <label for="check">Check Psd：<input id="check" class="text" type="password"></label><p class="alarm"></p>
+        <label for="mail">&nbsp;&nbsp;&nbsp;E-mail：&nbsp;&nbsp;&nbsp;<input id="mail" class="text" type="email"></label><p class="alarm"></p>
+        <label for="tel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="tel" class="text" type="tel"></label><p class="alarm"></p>
+        <p>Continent</p>
+        <select>
+            <option>
+               Choose continent
+            </option>
+        </select>
+        <p>Country</p>
+        <select>
+            <option>
+                Choose country
+            </option>
+        </select>
+        <br><br>
+        <section><label for="address">Detailed Address:<input id="address" class="text"></label><p class="alarm"></p></section>
+        I agree and accept the user agreement
+        <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="" id="trouble">Find account</a><br>
+        <a href="login.html" class="button" id="signIn"><input type="button" value="Log in" class="handin"></a>
+        <a class="button" id="reg"><input type="button" value="Sign up" class="handin"></a>
+    </div>
+</form>
+<footer id="footer">
+    <nav>
+        <a>Home page</a>
+        <a>Contact us</a>
+        <a>Find paintings</a>
+    </nav>
+    <p >Copyright©Lwy2017-2018</p>
+</footer>
+</body>
+</html>

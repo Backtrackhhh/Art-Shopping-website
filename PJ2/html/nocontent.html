@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <script>
+        window.onload=function () {
+            var searched = document.getElementById('searchbtn');
+            var unsearched = document.getElementById('content');
+            searched.onclick=function () {
+                if(unsearched.value.length==0){
+                    searched.href="#";
+                }else {
+                    searched.href="nocontent.html";
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to<a href="home.html"> <span>Art Store</span></a>
+    <div>
+        <a href="information.html" id="name"><i class="User"></i>Log in</a>
+        <a href="cart.html" id="cart"><i class="cart"></i>shopping cart</a>
+        <a href="" id="signOut"><i class="logout"></i>Log out</a></div>
+</header>
+<div name="d">
+    <span id="title">Look for your treasures!</span>
+    <form>
+        <a id="searchbtn"> <span type="button" id="searchbox" value=""></span></a>
+        <input type="search" id="content" placeholder="search">
+    </form>
+</div>
+<nav>
+    <a href="home.html" id="home" class="nav">Home</a>
+    <a href="" id="search" class="nav">Search</a>
+    <a href="details.html" id="details" class="nav">Detail</a>
+    <a href="" class="nav">Upload</a>
+</nav>
+<p id="search-result">Search results：</p>
+<br><br>
+<p>No matched results</p>
+</body>
+</html>
